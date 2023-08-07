@@ -1,6 +1,12 @@
 import React from "react";
 
-const Exercises = () => {
+interface ExercisesProps {
+  setExercises: (data: []) => void;
+  bodyPart: string;
+  setBodyPart: (data: string) => void;
+}
+
+const Exercises = ({ setExercises, bodyPart, setBodyPart }: ExercisesProps) => {
   return <div>Exercises</div>;
 };
 
