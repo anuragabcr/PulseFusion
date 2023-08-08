@@ -7,12 +7,21 @@ import Detail from "@/components/Detail";
 import SimilarExercises from "@/components/SimilarExercises";
 import ExerciseVideos from "@/components/ExerciseVideos";
 
+type ExerciseType = {
+  bodyPart: "string";
+  equipment: "string";
+  gifUrl: "string";
+  id: "string";
+  name: "string";
+  target: "string";
+};
+
 const ExerciseDetailsPage = ({
   params: { id },
 }: {
   params: { id: string };
 }) => {
-  const [exerciseDetail, setExerciseDetail] = useState({});
+  const [exerciseDetail, setExerciseDetail] = useState<ExerciseType | any>({});
   const [exerciseVideos, setExerciseVideos] = useState([]);
 
   useEffect(() => {

@@ -14,7 +14,7 @@ interface ExercisesProps {
 
 const Exercises = ({ setExercises, bodyPart, exercises }: ExercisesProps) => {
   const [currentPage, setCurrentPage] = useState(1);
-  const EXERCISE_PER_PAGE = 10;
+  const EXERCISE_PER_PAGE = 9;
   const currentExercises = exercises.slice(
     currentPage * EXERCISE_PER_PAGE - EXERCISE_PER_PAGE,
     currentPage * EXERCISE_PER_PAGE
